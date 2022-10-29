@@ -24,6 +24,7 @@
 	  <div class="ps-footer-wrapper">
 		 @include('DASHBOARD::Layouts.Shortcodes.footer')
 		</div>
+	@yield('javascript')
 	  </footer>
   </article>
 </section>

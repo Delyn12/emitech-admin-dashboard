@@ -9,10 +9,15 @@
 <meta name="calonical"   href="{{ url('')}}">
 <meta property="url" content="{{ url('')}}">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <title>{{ config('application.name') }} - @yield('title')</title>
 	<link rel="stylesheet" href="{{ asset('/Bootsrap/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="{{ asset('/vendor/dashboard/css/dashboard.css')}}">
+	<link rel="stylesheet" href="{{ asset('/vendor/homepage/css/styles.css')}}">
 </head>
 
 <body>	
+	
+	
