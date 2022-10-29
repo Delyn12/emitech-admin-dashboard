@@ -17,7 +17,7 @@ var account_btn = document.getElementById('account-dropdown');
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.dropdown-btn')) {
+  if (!event.target.matches('#account-dropdown')) {
     var dropdowns = document.getElementsByClassName("dropdown-item");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
