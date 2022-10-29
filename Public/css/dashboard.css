@@ -743,6 +743,7 @@
 				width: 96%;
 				display: none;
 				transition : show 0.5s ease;
+				z-index: 999;
 			}
 			
 			#page-layout .main-page-layout .main-header  .header-right-wrapper-show{
