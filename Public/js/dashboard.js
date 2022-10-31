@@ -7,17 +7,21 @@ function displayClock(){
 }
 
 
-// For dropdown admin account dropdown menu
-var account_btn = document.getElementById('account-dropdown');
-	
-	account_btn.addEventListener('click', function(){
-			document.getElementById('dropdown-item').classList.toggle('show-dropdown-item');
+var dropdown_btn = document.querySelectorAll('#dropdown-btn');
+for (let i = 0; i < dropdown_btn.length; i++){
+	dropdown_btn[i].addEventListener('click', function(){
+		for(let i = 0; i < dropdown_btn.length; i++){
+			dropdown_btn[i].nextElementSibling.classList.remove('show-dropdown-item');
+		}
+		var dropdown_item = this.nextElementSibling;
+		dropdown_item.classList.toggle('show-dropdown-item');
 	});
+}
 
-
+//
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('#account-dropdown')) {
+  if (!event.target.matches('.dropdown-btn')) {
     var dropdowns = document.getElementsByClassName("dropdown-item");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
@@ -44,9 +48,15 @@ window.onclick = function(event) {
 					   var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
+    } else {     
+ panel.style.display = "block";        
+for(let j=0;j<btn.length;j++){           
+ if(this.classList != btn[j].classList){ 
+  btn[j].classList.remove('accordion-btn-active');                
+btn[j].nextElementSibling.style.display = 'none';              
+}       
+ }    
+}
 	});
 	
 		}
@@ -62,17 +72,12 @@ var hamburger = document.getElementById('hamburger');
 	
 
 
+
 var header_toggle = document.getElementById('header-toggle');
 	header_toggle.addEventListener('click', function(){
 		document.getElementById('header-right-wrapper').classList.toggle('header-right-wrapper-show');
 	});
 	
-//	
-//	var sidebar = document.querySelector('#sidebar');
-//	
-//	sidebar.addEventListener('mouseover', function(){
-//		document.getElementById('sidebar').classList.remove('sidebar-collapse');
-//		document.getElementById('main-page-layout').classList.remove('expand-content-page-layout');
-//	});
+
 
 

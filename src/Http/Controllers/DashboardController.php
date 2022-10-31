@@ -12,7 +12,7 @@ class DashboardController extends Controller
 	
 	public function index()
 	{
-		return view ('DASHBOARD::Layouts.master');
+		return redirect()->route('dashboard');
 	}
 }
 
