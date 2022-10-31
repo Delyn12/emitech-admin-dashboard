@@ -32,7 +32,7 @@
 				  </a>
 			  </li>
 			  <li class="header-menu-item admin-dropdown">
-			  <button type="button" class="header-menu-link dropdown-btn" id="account-dropdown">
+			  <button type="button" class="header-menu-link dropdown-btn" id="dropdown-btn">
 				  <span class="icon"><img src="{{ asset('/Html images/200 x 200px.jpg')}}" alt="user" class="img-fluid"></span>
 				  <span class="text">{{ trans('DASH::dashboard.'.ADMIN_SESSION_USER_NAME) }}</span>
 				  </button>
