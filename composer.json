@@ -1,0 +1,36 @@
+{
+    "name": "emitech/dashboard",
+    "description": "This is the admin dashboard where all functionalities will be carried out and all the system admin url",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "composer": "^2.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Emitech\\Dashboard\\": "src/"
+        },
+		"files" : [
+			"Helper/dashboard_function.php",
+			"Helper/constant.php"
+		]
+    },
+    "authors": [
+        {
+            "name": "Olabige Michael",
+            "email": "websolution@emitech.com.my"
+        }
+    ],
+    "minimum-stability": "dev",
+	 "extra" : {
+		 "laravel" : {
+			 "providers" : [
+				 "Emitech\\Dashboard\\Providers\\DashboardServiceProvider"
+			 ], 
+			 "aliases" : {
+				 "AdminBaseDashboard" : "Emitech\\Dashboard\\Facades\\BaseDashboardFacades"
+			 }
+		 }
+	 }
+}
